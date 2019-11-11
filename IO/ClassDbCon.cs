@@ -12,7 +12,7 @@ namespace IO
     public class ClassDbCon
     {
         public string connectionString;
-        private SqlConnection con;
+        public SqlConnection con;
         private SqlCommand command;
 
         /// <summary>

@@ -92,6 +92,7 @@ namespace IO
             ExecuteNonQuery(strSqlCustomer);
         }
 
+        //
         public void RemoveCustomer(Customer outCustomer)
         {
             int customerID = 0;
@@ -100,14 +101,7 @@ namespace IO
             {
                 using (SqlCommand cmd = new SqlCommand(strSql, con))
                 {
-                    cmd.Parameters.AddWithValue("@name", System.Data.SqlDbType.NVarChar).Value = outCustomer.Name;
-                    cmd.Parameters.AddWithValue("@address", System.Data.SqlDbType.Int).Value = outCustomer.Address;
-                    cmd.Parameters.AddWithValue("@zipCity", System.Data.SqlDbType.Int).Value = outCustomer.ZipCity;
-                    cmd.Parameters.AddWithValue("@country", System.Data.SqlDbType.Int).Value = outCustomer.Country;
-                    cmd.Parameters.AddWithValue("@phone", System.Data.SqlDbType.Int).Value = outCustomer.Phone;
-                    cmd.Parameters.AddWithValue("@mail", System.Data.SqlDbType.Int).Value = outCustomer.MailAdr;
-                    cmd.Parameters.AddWithValue("@memberKey", System.Data.SqlDbType.Int).Value = outCustomer.MemberKey;
-                    cmd.Parameters.AddWithValue("@memberDate", System.Data.SqlDbType.Int).Value = outCustomer.MemberDate;
+                    cmd.Parameters.AddWithValue("@id", System.Data.SqlDbType.NVarChar).Value = outCustomer.Id;
 
                     OpenDB();
                     customerID = cmd.ExecuteNonQuery();
