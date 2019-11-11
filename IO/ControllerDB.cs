@@ -46,6 +46,7 @@ namespace IO
             return listRes;
         }
 
+        //Indsætter Customer i DB.
         public void InsertNewCustomer(Customer inCustomer)
         {
             int customerID = 0;
@@ -92,7 +93,7 @@ namespace IO
             ExecuteNonQuery(strSqlCustomer);
         }
 
-        //
+        //Sletter Customer fra DB.
         public void RemoveCustomer(Customer outCustomer)
         {
             int customerID = 0;
