@@ -66,6 +66,8 @@
                     Source="http://www.aspit.dk"
                     MinWidth="427" />
         <ListView Grid.ColumnSpan="3"
+                  ItemsSource="{Binding listOfCustomers}"
+                  SelectedItem="{Binding selectedCustomer,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                   HorizontalAlignment="Stretch"
                   Margin="3"
                   Grid.RowSpan="8"                  
@@ -73,7 +75,7 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name"
-                                    Width="230" />
+                                    Width="230"/>
                     <GridViewColumn Header="Country"
                                     Width="170" />
                 </GridView>
@@ -152,7 +154,7 @@
                  Grid.Row="8"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding Id}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -163,7 +165,7 @@
                  Grid.Row="9"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding Name}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -174,7 +176,7 @@
                  Grid.Row="10"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding Address}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -185,7 +187,7 @@
                  Grid.Row="11"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding ZipCity}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -196,7 +198,7 @@
                  Grid.Row="12"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding Country}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -207,7 +209,7 @@
                  Grid.Row="13"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding Phone}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -218,7 +220,7 @@
                  Grid.Row="14"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding MailAdr}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -229,7 +231,7 @@
                  Grid.Row="15"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding MemberKey}"
                  VerticalAlignment="Stretch" />
         <TextBox Grid.ColumnSpan="2"
                  Grid.Column="1"
@@ -240,7 +242,7 @@
                  Grid.Row="16"
                  IsReadOnly="True"
                  TextWrapping="Wrap"
-                 Text="TextBox"
+                 Text="{Binding MemberDate}"
                  VerticalAlignment="Stretch" />
         
         <Button Content="Add New"
@@ -270,6 +272,8 @@
                 VerticalAlignment="Stretch" />
 
         <ListView Grid.ColumnSpan="3"
+                  ItemsSource="{Binding listOfMetals}"
+                  SelectedItem="{Binding selectedMetal,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                   Grid.Column="4"
                   HorizontalAlignment="Stretch"
                   Margin="5"
